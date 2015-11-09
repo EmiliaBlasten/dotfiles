@@ -16,6 +16,9 @@ set smarthome
 set multibuffer
 
 
+## syntax highlighting for bash scripts
+include "/usr/share/nano/sh.nanorc"
+
 ## syntax highlighting for C/C++
 include "/usr/share/nano/c.nanorc"
 
