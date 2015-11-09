@@ -1,0 +1,14 @@
+startup_message off
+
+#Instead of "^A + key" for command (^A usually used to get to the 
+#beginning of the line) use "^B + key"
+escape ^bB
+
+# Statusbar
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
+
+# How many lines can be scrolled back using ^A + ESC and moving the cursor
+defscrollback 5000
+

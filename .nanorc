@@ -1,0 +1,93 @@
+## general bahaviour
+# Keep the same indentation after ENTER
+set autoindent
+# Set smooth scrolling instead of in chunks
+set smooth
+# Use Ctrl-J to justify paragraphs, Ctrl-U to unjustify
+set nowrap
+# 72 character width paragraphs
+set fill 72
+set tabsize 8
+# Show cursor position constantly
+set const
+# First HOME returs to end of first whitespace, second to start of line
+set smarthome
+# Allow opening of multiple files in different buffers
+set multibuffer
+
+
+## syntax highlighting for C/C++
+include "/usr/share/nano/c.nanorc"
+
+## syntax highlighting for HTML and MathJax
+syntax "html" "\.html?$"
+magic "HTML document text"
+
+#<!-- reserved for comments, "< " might be just comparison in JS
+color cyan start="<[^! =]" end=">"
+#but <!doctype html> should be cyan
+icolor cyan start="<!doctype" end=">"
+color red "&[^;[:space:]]*;"
+color brightcyan ""(\\.|[^"])*""
+#seems not possible to avoid \$ or setting it back to default color
+color magenta "\\\(|\\\)|\\\[|\\\]|\$"
+#anything of the form "\begin{...}" or "\end{...}"
+color magenta "\\begin\{[^\}]*\}|\\end\{[^\}]*\}"
+color brightblue start="<!--" end="-->"
+
+## syntax highlighting for CSS
+include "/usr/share/nano/css.nanorc"
+
+## syntax highlighting for TeX
+syntax "tex" "\.tex$" "\.bib$"
+
+#icolor cyan "\\.|\\[A-Z]*"
+color cyan "\\(documentclass|usepackage|theoremstyle|newtheorem)"
+color cyan "\\(DeclareMathOperator|newcommand|renewcommand|maketitle)"
+color cyan "\\(emph|addcontentsline|bibitem|cite|ref|eqref)"
+color brightcyan "\\(title|author|section|subsection|subsubsection)"
+#but <!doctype html> should be cyan
+icolor cyan start="<!doctype" end=">"
+color brightcyan ""(\\.|[^"])*""
+#seems not possible to avoid \$ or setting it back to default color
+color magenta "\\\(|\\\)|\\\[|\\\]|\$"
+#anything of the form "\begin{...}" or "\end{...}"
+color magenta "\\begin\{[^\}]*\}|\\end\{[^\}]*\}"
+#comments
+color brightblue "(|[^\])%.*"
+
+
+## syntax highlighting for nanorc
+include "/usr/share/nano/nanorc.nanorc"
+
+## syntax highlighting for JavaScript
+include "/usr/share/nano/javascript.nanorc"
+
+## syntax highlighting for Asymptote
+syntax "asy" "\.asy$"
+
+color brightred "\<[A-Z_][0-9A-Z_]+\>"
+color green "\<(real|pair|triple|bool|bool3|int|static|struct|typedef|string)\>"
+color green "\<(path|path3|guide|guide3|surface|pen|material|transform|frame)\>"
+color green "\(picture|file)\>"
+color brightyellow "\<(for|if|while|do|else|case|default|switch)\>"
+color brightyellow "\<(try|throw|catch|operator|new|delete)\>"
+color magenta "\<(goto|continue|break|return)\>"
+color brightcyan "\<(import|from|access|unravel|as)\>"
+
+# Strings.  In general you will want your strings and comments to come last,
+# because highlighting rules are applied in the order they are read in.
+color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
+# Multiline strings.  This regex is VERY resource intensive!
+color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+
+# Comments.
+color brightblue "//.*"
+color brightblue start="/\*" end="\*/"
+
+# Reminders.
+color ,yellow "(FIXME|TODO|XXX)"
+
+# Trailing whitespace.
+color ,white "[[:space:]]+$"
+
