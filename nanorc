@@ -24,7 +24,6 @@ include "/usr/share/nano/c.nanorc"
 
 ## syntax highlighting for HTML and MathJax
 syntax "html" "\.html?$"
-
 #<!-- reserved for comments, "< " might be just comparison in JS
 color cyan start="<[^! =]" end=">"
 #but <!doctype html> should be cyan
@@ -42,7 +41,6 @@ include "/usr/share/nano/css.nanorc"
 
 ## syntax highlighting for TeX
 syntax "tex" "\.tex$" "\.bib$"
-
 #icolor cyan "\\.|\\[A-Z]*"
 color cyan "\\(documentclass|usepackage|theoremstyle|newtheorem)"
 color cyan "\\(DeclareMathOperator|newcommand|renewcommand|maketitle)"
@@ -57,7 +55,6 @@ color magenta "\\\(|\\\)|\\\[|\\\]|\$"
 color magenta "\\begin\{[^\}]*\}|\\end\{[^\}]*\}"
 #comments
 color brightblue "(|[^\])%.*"
-
 
 ## syntax highlighting for nanorc
 include "/usr/share/nano/nanorc.nanorc"
@@ -81,7 +78,6 @@ color ,green "[[:space:]]+$"
 
 ## syntax highlighting for Asymptote
 syntax "asy" "\.asy$"
-
 color brightred "\<[A-Z_][0-9A-Z_]+\>"
 color green "\<(real|pair|triple|bool|bool3|int|static|struct|typedef|string)\>"
 color green "\<(path|path3|guide|guide3|surface|pen|material|transform|frame)\>"
@@ -90,20 +86,16 @@ color brightyellow "\<(for|if|while|do|else|case|default|switch)\>"
 color brightyellow "\<(try|throw|catch|operator|new|delete)\>"
 color magenta "\<(goto|continue|break|return)\>"
 color brightcyan "\<(import|from|access|unravel|as)\>"
-
 # Strings.  In general you will want your strings and comments to come last,
 # because highlighting rules are applied in the order they are read in.
 color brightyellow "<[^= 	]*>" ""(\\.|[^"])*""
 # Multiline strings.  This regex is VERY resource intensive!
 color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
-
 # Comments.
 color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
-
 # Reminders.
 color ,yellow "(FIXME|TODO|XXX)"
-
 # Trailing whitespace.
 color ,white "[[:space:]]+$"
 
