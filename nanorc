@@ -21,7 +21,6 @@ include "/usr/share/nano/c.nanorc"
 
 ## syntax highlighting for HTML and MathJax
 syntax "html" "\.html?$"
-magic "HTML document text"
 
 #<!-- reserved for comments, "< " might be just comparison in JS
 color cyan start="<[^! =]" end=">"
@@ -61,7 +60,7 @@ color brightblue "(|[^\])%.*"
 include "/usr/share/nano/nanorc.nanorc"
 
 ## syntax highlighting for JavaScript
-include "/usr/share/nano/javascript.nanorc"
+#include "/usr/share/nano/javascript.nanorc"
 
 ## syntax highlighting for Asymptote
 syntax "asy" "\.asy$"
