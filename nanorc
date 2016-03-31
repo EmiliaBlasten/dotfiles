@@ -125,11 +125,11 @@ color brightyellow "\<(for|if|while|with|do|else|case|default|switch)\>"
 color brightyellow "\<(export|try|throw|catch|new|delete)\>"
 color magenta "\<(continue|break|return|yield)\>"
 color brightmagenta "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
-# Strings.
-color brightyellow "<[^=        ]*>" ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 # Comments.
 color brightblue "//.*"
 color brightblue start="/\*" end="\*/"
+# Strings.
+color brightyellow "<[^=        ]*>" ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 # Trailing whitespace.
 color ,green "[[:space:]]+$"
 
