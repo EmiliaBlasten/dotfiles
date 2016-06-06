@@ -88,7 +88,7 @@ syntax "tex" "\.tex$" "\.bib$"
 color cyan "\\(documentclass|usepackage|theoremstyle|newtheorem)"
 color cyan "\\(DeclareMathOperator|newcommand|renewcommand|maketitle)"
 color cyan "\\(emph|addcontentsline|bibitem|cite|ref|eqref|label|pageref)"
-color brightcyan "\\(title|author|section|subsection|subsubsection)"
+color brightcyan "\\(title|author|date|section|subsection|subsubsection)"
 #but <!doctype html> should be cyan
 icolor cyan start="<!doctype" end=">"
 color brightcyan ""(\\.|[^"])*""
