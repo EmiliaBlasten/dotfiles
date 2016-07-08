@@ -1,0 +1,6 @@
+# Convert end-of-line to LF (used in GNU/Linux)
+# Read https://git-scm.com/docs/gitattributes for documentation
+* text=auto
+
+# Break words properly when diff'ing TeX
+*.tex diff=tex
