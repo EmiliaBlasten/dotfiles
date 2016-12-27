@@ -3,11 +3,11 @@
 set autoindent
 # Set smooth scrolling instead of in chunks
 set smooth
-# Use Ctrl-J to justify paragraphs, Ctrl-U to unjustify
-set nowrap
 # 72 character width paragraphs
 set fill 72
 set tabsize 8
+# Use Ctrl-J to justify paragraphs, Ctrl-U to unjustify
+set nowrap
 # Show cursor position constantly
 set const
 # First HOME returs to end of first whitespace, second to start of line
