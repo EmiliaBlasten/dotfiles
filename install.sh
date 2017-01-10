@@ -99,3 +99,37 @@ else
 fi
 
 
+
+
+
+
+if [ -e ~/.emacs ]
+then
+  # Back up old file?
+  if [ -e origs/emacs ]
+  then
+    echo -e "\n\nThe backup origs/emacs already exists."
+    read -p "Do you want to overwrite it with a more recent backup? (y/n) " rebackup
+    if [[ $rebackup =~ ^[Yy]$ ]]
+    then
+      echo -e "Backing up ~/.emacs to origs/emacs\n"
+      cp -a ~/.emacs origs/emacs
+    fi
+  else
+    echo -e "Backing up  ~/.emacs to origs/emacs\n"
+    cp -a ~/.emacs origs/emacs
+  fi
+
+  # Overwrite old file?
+  read -p "Overwrite old .emacs file? (y/n) " overwrite
+  if [[ $overwrite =~ ^[Yy]$ ]]
+  then
+    echo -e "Overwriting ~/.emacs\n"
+    cp emacs ~/.emacs
+  fi
+else
+  echo -e "Installing emacs to ~/.emacs\n"
+  cp emacs ~/.emacs
+fi
+
+
