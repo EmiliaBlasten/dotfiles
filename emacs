@@ -6,7 +6,7 @@
 (setq org-log-done t)
 
 ;; directory for all Org-mode files
-(setq org-agenda-files (list "~/org/"))
+(setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
 ;; Set color theme (generated using M-x customize-theme)
 (custom-set-variables
