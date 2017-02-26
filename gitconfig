@@ -3,7 +3,7 @@
 	email = eemeli.blasten@iki.fi
 	email = eemeli@countermail.com
 [core]
-	editor = nano
+	editor = emacs
 [push]
 	default = matching
 [alias]
