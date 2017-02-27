@@ -9,6 +9,10 @@
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
 
+;; Use 2 spaces when indenting CSS instead of the default 4
+(setq css-indent-offset 2)
+
+
 ;; Set color theme (generated using M-x customize-theme)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
