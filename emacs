@@ -8,6 +8,7 @@
 ;; directory for all Org-mode files
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
+
 ;; Set color theme (generated using M-x customize-theme)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
