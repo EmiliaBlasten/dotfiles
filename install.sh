@@ -133,3 +133,34 @@ else
 fi
 
 
+
+
+mkdir -p ~/.emacs.d/elisp
+if [ -e ~/.emacs.d/elisp/taskjuggler-mode.el ]
+then
+  # Back up old file?
+  if [ -e origs/taskjuggler-mode.el ]
+  then
+    echo -e "\n\nThe backup origs/taskjuggler-mode.el already exists."
+    read -p "Do you want to overwrite it with a more recent backup? (y/n) " rebackup
+    if [[ $rebackup =~ ^[Yy]$ ]]
+    then
+      echo -e "Backing up ~/.emacs.d/elisp/taskjuggler-mode.el to origs/taskjuggler-mode.el\n"
+      cp -a ~/.emacs.d/elisp/taskjuggler-mode.el origs/taskjuggler-mode.el
+    fi
+  else
+    echo -e "Backing up  ~/.emacs.d/elisp/taskjuggler-mode.el to origs/taskjuggler-mode.el\n"
+    cp -a ~/.emacs.d/elisp/taskjuggler-mode.el origs/taskjuggler-mode.el
+  fi
+
+  # Overwrite old file?
+  read -p "Overwrite old .emacs.d/elisp/taskjuggler-mode.el file? (y/n) " overwrite
+  if [[ $overwrite =~ ^[Yy]$ ]]
+  then
+    echo -e "Overwriting ~/.emacs.d/elisp/taskjuggler-mode.el\n"
+    cp taskjuggler-mode.el ~/.emacs.d/elisp/taskjuggler-mode.el
+  fi
+else
+  echo -e "Installing taskjuggler-mode.el to ~/.emacs.d/elisp/taskjuggler-mode.el\n"
+  cp taskjuggler-mode.el ~/.emacs.d/elisp/taskjuggler-mode.el
+fi

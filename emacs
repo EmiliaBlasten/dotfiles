@@ -28,3 +28,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;; Add .emacs.d/elisp to Emacs load path
+(add-to-list 'load-path "~/.emacs.d/elisp/")
+
+
+;; Use taskjuggler-mode.el by Stefan Kamphausen http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode
+(require 'taskjuggler-mode)
