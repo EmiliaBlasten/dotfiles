@@ -8,6 +8,10 @@
 ;; directory for all Org-mode files
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
+;; Set same TODO list for all. Individually it should be:
+;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELED(c@)
+(setq org-todo-keywords
+ '((sequence "TODO(t)" "WAITING(w!/!)" "LATER(l)" "|" "DONE(d)" "CANCELED(c@)")))
 
 ;; Use 2 spaces when indenting CSS instead of the default 4
 (setq css-indent-offset 2)
