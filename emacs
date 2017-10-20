@@ -17,6 +17,16 @@
 (setq css-indent-offset 2)
 
 
+;; Asymptote mode
+;; if "asy" is not on path, use:
+;;(add-to-list 'load-path "ASYDIR")
+;; for compiling with C-c C-c
+(autoload 'asy-mode "asy-mode.el" "Asymptote major mode." t)
+(autoload 'lasy-mode "asy-mode.el" "hybrid Asymptote/Latex major mode." t)
+(autoload 'asy-insinuate-latex "asy-mode.el" "Asymptote insinuate LaTeX." t)
+(add-to-list 'auto-mode-alist '("\\.asy$" . asy-mode))
+
+
 ;; Set color theme (generated using M-x customize-theme)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
