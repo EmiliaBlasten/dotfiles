@@ -8,6 +8,34 @@
 ;; directory for all Org-mode files
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
+;; Make sure org-latex uses the OT1 font encoding instead of OT. The
+;; latter has licensing issues in Parabola GNU/Linux. If the defaults
+;; of "org-latex-default-packages-alist" should ever change, then run
+;; "M-x apropos RET org-latex-default-packages-alist" and read them
+;; from there. Also, to preview a LaTeX formula when using X, run C-c
+;; C-x C-l.
+(with-eval-after-load 'org
+  (setq org-latex-default-packages-alist
+	'(("AUTO" "inputenc" t)
+	  ("OT1" "fontenc" t)
+	  ("" "fixltx2e" nil)
+	  ("" "graphicx" t)
+	  ("" "longtable" nil)
+	  ("" "float" nil)
+	  ("" "wrapfig" nil)
+	  ("" "rotating" nil)
+	  ("normalem" "ulem" t)
+	  ("" "amsmath" t)
+	  ("" "textcomp" t)
+	  ("" "marvosym" t)
+	  ("" "wasysym" t)
+	  ("" "amssymb" t)
+	  ("" "hyperref" nil)
+	  "\\tolerance=1000")
+	)
+  )
+
+
 ;; Set same TODO list for all. Individually it should be:
 ;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELED(c@)
 (setq org-todo-keywords
