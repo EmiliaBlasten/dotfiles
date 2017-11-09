@@ -34,6 +34,11 @@
 	  "\\tolerance=1000")
 	)
   )
+;; Make the formulas larger when previewing:
+(with-eval-after-load 'org
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
+  )
+
 
 ;; Tell emacs to use the current emacs cursor position for pasting,
 ;; instead of first moving to the mouse cursor position and then
