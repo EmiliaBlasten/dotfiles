@@ -35,6 +35,11 @@
 	)
   )
 
+;; Tell emacs to use the current emacs cursor position for pasting,
+;; instead of first moving to the mouse cursor position and then
+;; pasting.
+(setq mouse-yank-at-point t)
+
 
 ;; Set same TODO list for all. Individually it should be:
 ;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELED(c@)
