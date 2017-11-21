@@ -46,6 +46,11 @@
 (setq mouse-yank-at-point t)
 
 
+;; Tell emacs to align at equal sign in bibtex files. Do the aligning
+;; ourself with C-c C-q.
+(setq bibtex-align-at-equal-sign t)
+
+
 ;; Set same TODO list for all. Individually it should be:
 ;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELED(c@)
 (setq org-todo-keywords
