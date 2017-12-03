@@ -39,6 +39,17 @@
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   )
 
+;; Allow executing "GNU calc" code blocks in org-mode
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((calc . t)))
+
+
+;; Firstly, make C-x C-m always compile. Secondly make the compilation
+;; always run "make -k", unless a prefix argument has been given,
+;; e.g. C-u C-x C-m.
+(global-set-key "\C-x\C-m" 'compile)
+(setq compilation-read-command nil)
 
 ;; Tell emacs to use the current emacs cursor position for pasting,
 ;; instead of first moving to the mouse cursor position and then
