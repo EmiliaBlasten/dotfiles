@@ -103,16 +103,6 @@
  )
 
 
-;; Add .emacs.d/elisp to Emacs load path
-(add-to-list 'load-path "~/.emacs.d/elisp/")
-
-
-;; Use taskjuggler-mode.el by Stefan Kamphausen http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode
-(require 'taskjuggler-mode)
-;; Convert between OrgMode and FreeMind mindmapping files
-(require 'ox-freemind)
-
-
 ;; Emacs-magit
 (require 'magit)
 ;; Make C-x g show the magit status
