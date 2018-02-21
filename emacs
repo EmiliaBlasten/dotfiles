@@ -42,7 +42,8 @@
 ;; Allow executing "GNU calc" code blocks in org-mode
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((calc . t)))
+ '((calc . t)
+   (octave . t)))
 
 
 ;; Firstly, make C-x C-m always compile. Secondly make the compilation
