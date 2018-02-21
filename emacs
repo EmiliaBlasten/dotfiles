@@ -44,6 +44,10 @@
  'org-babel-load-languages
  '((calc . t)
    (octave . t)))
+;; Make the keyboard sortcut "< s TAB" create a code block that also
+;; exports the results when exporting.
+(add-to-list 'org-structure-template-alist
+  '("s" "#+BEGIN_SRC ? :exports both\n\n#+END_SRC"))
 
 
 ;; Firstly, make C-x C-m always compile. Secondly make the compilation
