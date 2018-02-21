@@ -113,3 +113,9 @@
 (require 'ox-taskjuggler)
 ;; Convert between OrgMode and FreeMind mindmapping files
 (require 'ox-freemind)
+
+
+;; Emacs-magit
+(require 'magit)
+;; Make C-x g show the magit status
+(define-key global-map "\C-xg" 'magit-status)
