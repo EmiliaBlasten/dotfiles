@@ -109,8 +109,6 @@
 
 ;; Use taskjuggler-mode.el by Stefan Kamphausen http://www.skamphausen.de/cgi-bin/ska/taskjuggler-mode
 (require 'taskjuggler-mode)
-;; Activate the Taskjuggler exporter in Org-mode (requires emacs-org-mode installed in Parabola GNU/Linux)
-(require 'ox-taskjuggler)
 ;; Convert between OrgMode and FreeMind mindmapping files
 (require 'ox-freemind)
 
