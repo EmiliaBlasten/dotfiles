@@ -1,5 +1,10 @@
 ;; Global keys for using Org-mode
 ;; Read the tutorial at http://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+
+;; Make new buffers split the window vertically instead of horizontally
+(setq split-height-threshold nil)
+(setq split-width-threshold 80)
+
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
