@@ -40,9 +40,9 @@
 	)
   )
 ;; Make the formulas larger when previewing:
-(with-eval-after-load 'org
-  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
-  )
+;;(with-eval-after-load 'org
+;;  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
+;;  )
 
 ;; Allow executing "GNU calc" code blocks in org-mode
 (org-babel-do-load-languages
