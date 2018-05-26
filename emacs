@@ -54,7 +54,10 @@
 ;; exports the results when exporting.
 (add-to-list 'org-structure-template-alist
   '("s" "#+BEGIN_SRC ? :exports both\n\n#+END_SRC"))
-
+;; Add syntax highlighting in code blocks
+(setq org-src-fontify-natively t)
+;; Use tab to indent inside code blocks
+(setq org-src-tab-acts-natively t)
 
 ;; Firstly, make C-x C-m always compile. Secondly make the compilation
 ;; always run "make -k", unless a prefix argument has been given,
