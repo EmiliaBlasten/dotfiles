@@ -48,7 +48,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((calc . t)
-   (octave . t)))
+   (octave . t)
+   (python . t)))
 ;; Make the keyboard sortcut "< s TAB" create a code block that also
 ;; exports the results when exporting.
 (add-to-list 'org-structure-template-alist
