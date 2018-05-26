@@ -81,6 +81,8 @@
 (setq org-todo-keywords
  '((sequence "TODO(t)" "WAITING(w!/!)" "LATER(l)" "|" "DONE(d)" "CANCELED(c@)")))
 
+;; Never use tabs, always use spaces for indenting
+(setq indent-tabs-mode nil)
 ;; Use 2 spaces when indenting CSS and JS instead of the default 4
 (setq css-indent-offset 2)
 (setq js-indent-level 2)
