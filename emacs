@@ -77,9 +77,9 @@
 
 
 ;; Set same TODO list for all. Individually it should be:
-;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELED(c@)
+;;#+SEQ_TODO:   TODO(t) WAITING(w!/!) LATER(l) | DONE(d) CANCELLED(c@)
 (setq org-todo-keywords
- '((sequence "TODO(t)" "WAITING(w!/!)" "LATER(l)" "|" "DONE(d)" "CANCELED(c@)")))
+ '((sequence "TODO(t)" "WAITING(w!/!)" "LATER(l)" "|" "DONE(d)" "CANCELLED(c@)")))
 
 ;; Never use tabs, always use spaces for indenting
 (setq indent-tabs-mode nil)
