@@ -59,6 +59,11 @@
 ;; Use tab to indent inside code blocks
 (setq org-src-tab-acts-natively t)
 
+
+;; Tell emacs to opem .m-files in the Octave-mode
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+
+
 ;; Firstly, make C-x C-m always compile. Secondly make the compilation
 ;; always run "make -k", unless a prefix argument has been given,
 ;; e.g. C-u C-x C-m.
