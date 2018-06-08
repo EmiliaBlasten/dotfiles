@@ -13,5 +13,5 @@ hardstatus string "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{-b kw}%u %-Lw%{= rW}%5
 defscrollback 5000
 
 # Use same colors as in terminal
-term xterm-256color
+term screen-256color
 
