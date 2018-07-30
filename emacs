@@ -47,11 +47,16 @@
 ;;  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
 ;;  )
 
+;; Load emacs speaks statistics
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/ess")
+(require 'ess-site)
+
 ;; Allow executing "GNU calc" code blocks in org-mode
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((calc . t)
    (octave . t)
+   (R . t)
    (python . t)))
 ;; Make the keyboard sortcut "< s TAB" create a code block that also
 ;; exports the results when exporting.
