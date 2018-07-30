@@ -13,6 +13,9 @@
 ;; directory for all Org-mode files
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
 
+;; Show done recurring tasks in org-mode log (agenda, then press l)
+(setq org-agenda-log-mode-items '(closed clock state))
+
 ;; Make sure org-latex uses the OT1 font encoding instead of OT. The
 ;; latter has licensing issues in Parabola GNU/Linux. If the defaults
 ;; of "org-latex-default-packages-alist" should ever change, then run
