@@ -1,7 +1,6 @@
 [user]
-	name = Eemeli Blåsten
-	email = eemeli.blasten@iki.fi
-	email = eemeli@countermail.com
+	name = Dr Blåsten
+	email = drblasten@countermail.com
 [core]
 	editor = emacs
 [push]
