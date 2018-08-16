@@ -1,6 +1,12 @@
 ;; Global keys for using Org-mode
 ;; Read the tutorial at http://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
 
+;; Load the MELPA package library
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
+
 ;; Make new buffers split the window vertically instead of horizontally
 (setq split-height-threshold nil)
 (setq split-width-threshold 80)
@@ -120,7 +126,8 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes (quote (tango-dark))))
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(package-selected-packages (quote (markdown-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
