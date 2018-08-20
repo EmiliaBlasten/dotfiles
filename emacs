@@ -135,6 +135,29 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Set markdown-command to run pandoc
+(setq markdown-command "pandoc")
+;; Use HTML5 and UTF-8 for markdown export to html
+(eval-after-load "markdown-mode"
+  '(defalias 'markdown-add-xhtml-header-and-footer 'as/markdown-add-xhtml-header-and-footer))
+
+(defun as/markdown-add-xhtml-header-and-footer (title)
+  "Wrap XHTML header and footer with given TITLE around current buffer."
+  (goto-char (point-min))
+  (insert "<!DOCTYPE html5>\n"
+	  "<html>\n"
+	  "<head>\n<title>")
+  (insert title)
+  (insert "</title>\n")
+  (insert "<meta charset=\"utf-8\" />\n")
+  (when (> (length markdown-css-paths) 0)
+    (insert (mapconcat 'markdown-stylesheet-link-string markdown-css-paths "\n")))
+  (insert "\n</head>\n\n"
+	  "<body>\n\n")
+  (goto-char (point-max))
+  (insert "\n"
+	  "</body>\n"
+	  "</html>\n"))
 
 ;; Emacs-magit
 (require 'magit)
