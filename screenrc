@@ -16,3 +16,6 @@ defscrollback 5000
 # Use same colors as in terminal
 term screen-256color
 
+# Use bash and read the .bashrc when creating a new tab (the "-" for
+# this)
+defshell -bash
