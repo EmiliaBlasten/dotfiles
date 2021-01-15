@@ -15,6 +15,13 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+;; The below is so that PDF-files or others can be opened with \C-o in org-mode
+;; It makes xdg-open work in eshell. See
+;;  https://askubuntu.com/questions/646631/emacs-doesnot-work-with-xdg-open
+;; and
+;;  https://emacs.stackexchange.com/questions/19344/why-does-xdg-open-not-work-in-eshell
+;; WARNING: it might break other things. Some have mentioned gnuplot.
+(setq process-connection-type nil)
 
 ;; directory for all Org-mode files
 (setq org-agenda-files (list "~/org/" "~/org/papers/"))
