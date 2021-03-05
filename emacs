@@ -29,6 +29,10 @@
 ;; Show done recurring tasks in org-mode log (agenda, then press l)
 (setq org-agenda-log-mode-items '(closed clock state))
 
+;; Let the agenda always show 7 days in advance instead of the current week
+(setq org-agenda-start-on-weekday nil)
+(setq org-agenda-span 7)
+
 ;; Make sure org-latex uses the OT1 font encoding instead of OT. The
 ;; latter has licensing issues in Parabola GNU/Linux. If the defaults
 ;; of "org-latex-default-packages-alist" should ever change, then run
