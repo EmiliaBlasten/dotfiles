@@ -123,6 +123,38 @@
 (setq sh-indentation 2)
 
 
+
+;; Helm-Bibtex
+;; See https://github.com/tmalsburg/helm-bibtex
+(autoload 'helm-bibtex "helm-bibtex" "" t)
+(setq bibtex-completion-bibliography
+      '("~/Documents/bibliography/references.bib"))
+(setq bibtex-completion-library-path
+      '("~/Documents/bibliography/bibtex-pdfs"))
+(setq bibtex-completion-pdf-field "File")
+(setq bibtex-completion-notes-path "~/Documents/bibliography/notes.org")
+(setq bibtex-completion-additional-search-fields '(keywords))
+(setq bibtex-completion-pdf-symbol "⌘")
+(setq bibtex-completion-notes-symbol "✎")
+(setq bibtex-completion-pdf-extension '(".pdf" ".djvu"))
+(setq while-no-input-ignore-events '())
+;; See this also:
+;; https://github.com/tmalsburg/helm-bibtex#create-a-bibtex-file-containing-only-specific-entries
+
+;; org-ref config
+(setq reftex-default-bibliography '("~/Documents/bibliography/references.bib"))
+(setq org-ref-bibliography-notes "~/Documents/bibliography/notes.org"
+      org-ref-default-bibliography '("~/Documents/bibliography/references.bib")
+      org-ref-pdf-directory "~/Documents/bibliography/bibtex-pdfs/")
+
+(require 'doi-utils)
+(require 'org-ref-isbn)
+(require 'org-ref-pubmed)
+(require 'org-ref-arxiv)
+(require 'x2bib)
+;; Open pdf's as org-mode does (see above).
+(setq bibtex-completion-pdf-open-function 'org-open-file)
+
 ;; Asymptote mode
 ;; if "asy" is not on path, use:
 ;;(add-to-list 'load-path "ASYDIR")
