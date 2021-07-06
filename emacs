@@ -67,9 +67,10 @@
 ;;  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
 ;;  )
 
+
 ;; Load emacs speaks statistics
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/ess")
-(require 'ess-site)
+;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/ess")
+;;(require 'ess-site)
 
 ;; Allow executing "GNU calc" code blocks in org-mode
 (org-babel-do-load-languages
