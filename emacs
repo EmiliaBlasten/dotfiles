@@ -11,6 +11,9 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold 80)
 
+;; Word wrap
+(setq-default word-wrap t)
+
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
