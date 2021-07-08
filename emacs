@@ -133,7 +133,7 @@
       '("~/Documents/bibliography/bibtex-pdfs"))
 (setq bibtex-completion-pdf-field "File")
 (setq bibtex-completion-notes-path "~/Documents/bibliography/notes.org")
-(setq bibtex-completion-additional-search-fields '(keywords))
+(setq bibtex-completion-additional-search-fields '(keywords tags))
 (setq bibtex-completion-pdf-symbol "⌘")
 (setq bibtex-completion-notes-symbol "✎")
 ;; Requires a newer version of bibtex-completion!
