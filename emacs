@@ -260,6 +260,12 @@ checked."
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (tango-dark)))
+ '(org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . "xdg-open %s"))))
  '(package-selected-packages (quote (bibtex-completion org-ref markdown-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
