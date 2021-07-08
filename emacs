@@ -136,7 +136,8 @@
 (setq bibtex-completion-additional-search-fields '(keywords))
 (setq bibtex-completion-pdf-symbol "⌘")
 (setq bibtex-completion-notes-symbol "✎")
-(setq bibtex-completion-pdf-extension '(".pdf" ".djvu"))
+;; Requires a newer version of bibtex-completion!
+;; (setq bibtex-completion-pdf-extension '(".pdf" ".djvu"))
 (setq while-no-input-ignore-events '())
 ;; See this also:
 ;; https://github.com/tmalsburg/helm-bibtex#create-a-bibtex-file-containing-only-specific-entries
