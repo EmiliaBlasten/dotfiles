@@ -141,7 +141,13 @@
 (setq while-no-input-ignore-events '())
 ;; See this also:
 ;; https://github.com/tmalsburg/helm-bibtex#create-a-bibtex-file-containing-only-specific-entries
-
+(require 'helm)
+(require 'helm-config)
+(global-set-key (kbd "<apps>") 'helm-command-prefix)
+(define-key helm-command-map "b" 'helm-bibtex)
+(define-key helm-command-map "B" 'helm-bibtex-with-local-bibliography)
+(define-key helm-command-map "n" 'helm-bibtex-with-notes)
+(define-key helm-command-map (kbd "<apps>") 'helm-resume)
 ;; org-ref config
 (setq reftex-default-bibliography '("~/Documents/bibliography/references.bib"))
 (setq org-ref-bibliography-notes "~/Documents/bibliography/notes.org"
